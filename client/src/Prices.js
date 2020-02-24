@@ -101,10 +101,7 @@ const Prices = ({ isAuthenticated, subscription, handleToken }) => {
             </ul>
           </div>
           <div className="plan-footer">
-            <Link
-              to="/https://app.flowalgo.com/users/signup/trialrun14"
-              className="btn btn-primary"
-            >
+            <Link to="/prices" className="btn btn-primary">
               Get Started Here
             </Link>
           </div>

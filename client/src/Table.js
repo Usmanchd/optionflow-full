@@ -61,7 +61,7 @@ export default function Table() {
       }
     }
     fetch();
-  }, 15000);
+  }, 120000);
 
   const getdesireddata = string => {
     let b = string.split(': ');
@@ -145,14 +145,22 @@ export default function Table() {
                   {option.put_call === 'PUT' ? (
                     <span
                       className="badge badge-danger"
-                      style={{ padding: '5px 10px' }}
+                      style={{
+                        maxWidth: '40px',
+                        minWidth: '40px',
+                        padding: '5px 10px'
+                      }}
                     >
                       {option.ticker}
                     </span>
                   ) : (
                     <span
                       className="badge badge-success"
-                      style={{ padding: '5px 10px' }}
+                      style={{
+                        maxWidth: '40px',
+                        minWidth: '40px',
+                        padding: '5px 10px'
+                      }}
                     >
                       {option.ticker}
                     </span>
@@ -164,7 +172,7 @@ export default function Table() {
                 <td>SPOT</td>
                 <td>{getdesireddata(option.description)}</td>
                 <td>{option.option_activity_type}</td>
-                <td>{option.cost_basis}</td>
+                <td>{parseFloat(option.cost_basis).toFixed(2)}</td>
                 <td>...</td>
               </tr>
             ))}

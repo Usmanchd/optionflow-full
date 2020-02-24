@@ -11,7 +11,7 @@ export const loadUser = () => async dispatch => {
       type: 'LOAD_USER',
       payload: res.data
     });
-    console.log('called');
+
   } catch (err) {
     const errors = err.response.data.errors;
     dispatch({ type: 'REGISTER_FAILED', payload: errors });
@@ -39,7 +39,6 @@ export const register = ({ name, email, password }) => async dispatch => {
 };
 
 export const login = ({ email, password }) => async dispatch => {
-  console.log(email);
   const config = {
     headers: {
       'Content-Type': 'application/json'
@@ -55,7 +54,7 @@ export const login = ({ email, password }) => async dispatch => {
     dispatch(loadUser());
   } catch (err) {
     const errors = err.response.data.errors;
-    console.log(errors);
+ 
     dispatch({ type: 'LOGIN_FAILED', payload: errors });
   }
 };
@@ -67,7 +66,6 @@ export const logout = () => dispatch => {
 };
 
 export const handleToken = token => async dispatch => {
-  console.log('handleToken');
   try {
     const config = {
       headers: {

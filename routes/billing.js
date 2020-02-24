@@ -6,7 +6,7 @@ const stripe = require('stripe')('sk_test_eA0H4Ppoqvqa3sOyNbohPdYE00lHLQORfT');
 
 router.post('/', auth, async (req, res) => {
   let user = await User.findById(req.user.id);
-  console.log(user);
+
 
   let customer = {};
 
@@ -24,13 +24,12 @@ router.post('/', auth, async (req, res) => {
     items: [{ plan: 'plan_GmqLBLDN9fhktx' }]
   });
 
-  console.log(sub);
   let user1 = await User.findOneAndUpdate(
     { email: user.email },
     { subscription: true, stripeId: customer.id, subscriptionId: sub.id },
     { new: true }
   );
-  console.log(user1);
+
   res.status(200).json(user1);
 });
 

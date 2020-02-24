@@ -57,13 +57,13 @@ function Landingpage({ isAuthenticated }) {
             FlowAlgo alerts you as notable orders take place on the stock and
             equity options markets. Remove the noise and zone in on what truly
             matters.
-            <a href="/select-a-plan/" className="btn btn-primary">
+            {/* <a href="/select-a-plan/" className="btn btn-primary">
               Try Two Weeks for $37
             </a>
             <p style={{ fontSize: '0.75rem', paddingTop: '1.5rem' }}>
               Two week trial offer ends February 15th. Plans starting at just
               $99/Month when paid annually.{' '}
-            </p>
+            </p> */}
             {/* <div className="play_video">
               <script
                 src="https://fast.wistia.com/embed/medias/9g0o7vygbj.jsonp"

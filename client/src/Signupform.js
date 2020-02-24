@@ -11,7 +11,6 @@ import Loader from 'react-loader-spinner';
 
 function Signupform({ isAuthenticated, register, errors, subscription }) {
   const [loading, setloading] = useState(false);
-  console.log(loading);
   const [formData, setFormData] = useState({
     name: '',
     email: '',

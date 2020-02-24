@@ -14,7 +14,6 @@ import Loader from 'react-loader-spinner';
 
 function Loginform({ isAuthenticated, login, subscription, errors }) {
   const [loading, setloading] = useState(false);
-  console.log(loading);
   const [state, setstate] = useState({
     email: '',
     password: ''
