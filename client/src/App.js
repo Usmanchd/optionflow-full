@@ -37,7 +37,7 @@ function App() {
         }}
       >
         <Loader
-          type="TailSpin"
+          type="Grid"
           color="#272494"
           height={100}
           width={100}
